@@ -15,9 +15,15 @@
 #define BROKEN_SYMBOL "└"
 #define DIR_SYMBOL '/'
 //但是数据不一定是正常的。
-//每进入或出来一个文件夹时，改变的前面的符号的个数，Windows有4个，linux有3个
+//每进入或出来一个文件夹时，改变的前面的符号的个数，Windows有4个，linux有5个
+//（使用termux的tree命令）安卓：0，7，12，17，22，27，
+//bpcs（bpcs tree /f >）：0，7，12，17，22，27，
+//ubuntu（/f）：0，7，12，17，22，27，
+//centos（/f）：0，7，12，17，22，27，
+//windows（cmd的tree /f）：0，4，8，12，16，28
+
 #define WINDOWS_SYMBOL_CNT_PER_CHANGE_DIR (4)
-#define LINUX_SYMBOL_CNT_PER_CHANGE_DIR (3)
+#define LINUX_SYMBOL_CNT_PER_CHANGE_DIR (5)
 
 #define printline()	printf("%s",line)
 #define printpath()	printf("%s",path)
